@@ -9,5 +9,9 @@ app.engine('html', ejs.renderFile);
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-		res.render('index.html');
+	res.render('index.html');
+});
+
+app.get('/inicial/geral', (req, res) => {
+	res.render('inicialgeral.html');
 });
