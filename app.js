@@ -19,3 +19,8 @@ app.get('/inicial/geral', (req, res) => {
 app.get('/inicial/organizador', (req, res) => {
 	res.render('inicialorganizador.html');
 });
+
+app.get('/notificacao/inscricao', (req, res) => {
+	res.render('notificacaoinscricao.html');
+});
+
