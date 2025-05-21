@@ -15,3 +15,7 @@ app.get('/', (req, res) => {
 app.get('/inicial/geral', (req, res) => {
 	res.render('inicialgeral.html');
 });
+
+app.get('/inicial/organizador', (req, res) => {
+	res.render('inicialorganizador.html');
+});

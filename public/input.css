@@ -1,4 +1,11 @@
-@import "tailwindcss" source('../views/*{html}');
+@import "tailwindcss" source('../views/**/*.{html}');
+@source "./public/**/*.{html,js}";
+@plugin "daisyui";
+
+@plugin "daisyui" {
+  themes: garden;
+}
+
 @source "./public/*.{html,js}";
 @plugin "daisyui";
 
