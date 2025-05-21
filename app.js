@@ -24,3 +24,6 @@ app.get('/notificacao/inscricao', (req, res) => {
 	res.render('notificacaoinscricao.html');
 });
 
+app.get('/sessao/login', (req, res) => {
+	res.render('login.html');
+});

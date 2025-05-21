@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<%- include('partials/theme.html'); %>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link href="/output.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<%- include('partials/nav.html'); %>
+
+			<div class="hero bg-base-200 min-h-screen flex items-center justify-center">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 px-8">
+					<!-- Left Section (Text) -->
+					<div class="flex flex-col justify-center text-center lg:text-left">
+						<h1 class="text-5xl font-bold">Entre agora!</h1>
+						<p class="py-6 text-lg">
+							Venha participar dessa comunidade como revisor ou organizador.
+						</p>
+					</div>
+
+					<!-- Right Section (Login Form) -->
+					<div class="card bg-base-100 w-full max-w-md mx-auto shadow-2xl">
+						<div class="card-body">
+							<fieldset class="fieldset">
+								<label class="label">Email</label>
+								<input type="email" class="input input-bordered w-full" placeholder="Email" />
+								<label class="label">Senha</label>
+								<input type="password" class="input input-bordered w-full" placeholder="Senha" />
+								<div><a class="link link-hover">Esqueceu senha?</a></div>
+								<button class="btn btn-neutral mt-4 w-full">Login</button>
+							</fieldset>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<%- include('partials/footer.html'); %>
+	</body>
