@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<%- include('partials/theme.html'); %>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link href="/output.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<%- include('partials/nav.html'); %>
+
+			<div class="hero bg-base-200 p-12">
+				<div class="hero-content flex-col lg:flex-row gap-12 w-full max-w-6xl">
+					<!-- Image Section -->
+					<img src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp"
+						alt="Evento Banner" class="w-full max-w-sm rounded-lg shadow-2xl" />
+					<!-- Text Section -->
+					<div class="flex flex-col justify-center w-full space-y-4">
+						<h1 class="text-4xl font-bold text-primary">Evento</h1>
+
+						<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+							<p><span class="font-semibold">Edital:</span> xxx</p>
+							<p><span class="font-semibold">Status:</span> xxx</p>
+							<p><span class="font-semibold">Prazo Artigos:</span> xxx</p>
+							<p><span class="font-semibold">Data:</span> xxx</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="hero bg-base-200 flex flex-col items-center p-16">
+				<h1 class="text-4xl font-bold text-primary mb-8">Artigos Aprovados</h1>
+				<div class="w-full max-w-5xl overflow-x-auto">
+					<table class="table w-full">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Nome</th>
+								<th>Autor</th>
+								<th>Download</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>1</th>
+								<td>Teste 1</td>
+								<td>Victor</td>
+								<td><a href="#" class="link link-primary">Link</a></td>
+							</tr>
+							<tr>
+								<th>2</th>
+								<td>Teste 2</td>
+								<td>Pessoa Sobrenome</td>
+								<td><a href="#" class="link link-primary">Link</a></td>
+							</tr>
+							<tr>
+								<th>3</th>
+								<td>Teste 3</td>
+								<td>Pessoa Pessoa</td>
+								<td><a href="#" class="link link-primary">Link</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="hero bg-base-200 flex flex-col items-center p-16">
+				<div class="w-full max-w-2xl bg-base-100 rounded-lg shadow-xl p-10 space-y-6">
+					<h2 class="text-3xl font-bold text-primary text-center">Inscreva-se para participar do evento</h2>
+					<p class="text-center text-base-content">
+						Preencha os campos abaixo para confirmar sua inscrição. Entraremos em contato com você por
+						e-mail.
+					</p>
+
+					<form class="space-y-6">
+						<div>
+							<label class="label font-semibold">Nome completo</label>
+							<input type="text" class="input input-bordered w-full" placeholder="Seu nome" />
+						</div>
+
+						<div>
+							<label class="label font-semibold">Email</label>
+							<input type="email" class="input input-bordered w-full" placeholder="seu@email.com" />
+						</div>
+
+						<div>
+							<label class="label font-semibold">Instituição / Organização</label>
+							<input type="text" class="input input-bordered w-full"
+								placeholder="Universidade, empresa, etc." />
+						</div>
+
+						<div class="text-center pt-4">
+							<button class="btn btn-primary px-10">Quero me inscrever</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+
+			<div class="hero bg-base-200 flex flex-col items-center p-16">
+				<div class="w-full max-w-2xl bg-base-100 rounded-lg shadow-xl p-10 space-y-6">
+					<h2 class="text-3xl font-bold text-primary text-center">Adicionar Artigo</h2>
+					<p class="text-center text-base-content">
+						Preencha os dados abaixo e envie o seu artigo para análise e aprovação.
+					</p>
+
+					<form class="space-y-6" enctype="multipart/form-data" method="POST" action="/upload-article">
+						<div>
+							<label class="label font-semibold">Nome do Artigo</label>
+							<input type="text" class="input input-bordered w-full" placeholder="Título do artigo"
+								name="title" required />
+						</div>
+
+						<div>
+							<label class="label font-semibold">Autor</label>
+							<input type="text" class="input input-bordered w-full" placeholder="Nome do autor"
+								name="author" required />
+						</div>
+
+						<div>
+							<label class="label font-semibold">Arquivo (.pdf)</label>
+							<input type="file" class="file-input file-input-bordered w-full" accept=".pdf"
+								name="articleFile" required />
+						</div>
+
+						<div class="text-center pt-4">
+							<button class="btn btn-primary px-10">Enviar Artigo</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<%- include('partials/footer.html'); %>
+	</body>

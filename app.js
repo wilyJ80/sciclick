@@ -27,3 +27,7 @@ app.get('/notificacao/inscricao', (req, res) => {
 app.get('/sessao/login', (req, res) => {
 	res.render('login.html');
 });
+
+app.get('/evento/geral', (req, res) => {
+	res.render('eventogeral.html');
+});
