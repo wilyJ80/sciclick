@@ -68,68 +68,71 @@
 			</div>
 
 			<div class="hero bg-base-200 flex flex-col items-center p-16">
-				<div class="w-full max-w-2xl bg-base-100 rounded-lg shadow-xl p-10 space-y-6">
-					<h2 class="text-3xl font-bold text-primary text-center">Inscreva-se para participar do evento</h2>
-					<p class="text-center text-base-content">
-						Preencha os campos abaixo para confirmar sua inscrição. Entraremos em contato com você por
-						e-mail.
-					</p>
 
-					<form class="space-y-6">
-						<div>
-							<label class="label font-semibold">Nome completo</label>
-							<input type="text" class="input input-bordered w-full" placeholder="Seu nome" />
-						</div>
+				<div class="flex flex-col lg:flex-row gap-12 w-full max-w-6xl">
+					<!-- Inscrição Form -->
+					<div class="w-full lg:w-1/2 space-y-6">
+						<h3 class="text-2xl font-semibold text-primary">Inscreva-se</h3>
+						<p class="text-base-content mb-4">
+							Preencha os dados abaixo para confirmar sua inscrição. Entraremos em contato com você por
+							e-mail.
+						</p>
 
-						<div>
-							<label class="label font-semibold">Email</label>
-							<input type="email" class="input input-bordered w-full" placeholder="seu@email.com" />
-						</div>
+						<form class="space-y-4">
+							<div>
+								<label class="label font-semibold">Nome completo</label>
+								<input type="text" class="input input-bordered w-full" placeholder="Seu nome" />
+							</div>
 
-						<div>
-							<label class="label font-semibold">Instituição / Organização</label>
-							<input type="text" class="input input-bordered w-full"
-								placeholder="Universidade, empresa, etc." />
-						</div>
+							<div>
+								<label class="label font-semibold">Email</label>
+								<input type="email" class="input input-bordered w-full" placeholder="seu@email.com" />
+							</div>
 
-						<div class="text-center pt-4">
-							<button class="btn btn-primary px-10">Quero me inscrever</button>
-						</div>
-					</form>
-				</div>
-			</div>
+							<div>
+								<label class="label font-semibold">Instituição / Organização</label>
+								<input type="text" class="input input-bordered w-full"
+									placeholder="Universidade, empresa, etc." />
+							</div>
+
+							<div class="text-right pt-2">
+								<button class="btn btn-primary">Quero me inscrever</button>
+							</div>
+						</form>
+					</div>
 
 
-			<div class="hero bg-base-200 flex flex-col items-center p-16">
-				<div class="w-full max-w-2xl bg-base-100 rounded-lg shadow-xl p-10 space-y-6">
-					<h2 class="text-3xl font-bold text-primary text-center">Adicionar Artigo</h2>
-					<p class="text-center text-base-content">
-						Preencha os dados abaixo e envie o seu artigo para análise e aprovação.
-					</p>
+					<div class="divider lg:divider-horizontal divider-accent">ou</div>
 
-					<form class="space-y-6" enctype="multipart/form-data" method="POST" action="/upload-article">
-						<div>
-							<label class="label font-semibold">Nome do Artigo</label>
-							<input type="text" class="input input-bordered w-full" placeholder="Título do artigo"
-								name="title" required />
-						</div>
+					<!-- Adicionar Artigo Form -->
+					<div class="w-full lg:w-1/2 space-y-6">
+						<h3 class="text-2xl font-semibold text-primary">Adicionar Artigo</h3>
+						<p class="text-base-content mb-4">
+							Envie seu artigo preenchendo as informações abaixo. Apenas arquivos PDF são aceitos.
+						</p>
 
-						<div>
-							<label class="label font-semibold">Autor</label>
-							<input type="text" class="input input-bordered w-full" placeholder="Nome do autor"
-								name="author" required />
-						</div>
+						<form class="space-y-4" enctype="multipart/form-data" method="POST" action="/upload-article">
+							<div>
+								<label class="label font-semibold">Nome do Artigo</label>
+								<input type="text" class="input input-bordered w-full" name="title" required />
+							</div>
 
-						<div>
-							<label class="label font-semibold">Arquivo (.pdf)</label>
-							<input type="file" class="file-input file-input-bordered w-full" accept=".pdf"
-								name="articleFile" required />
-						</div>
+							<div>
+								<label class="label font-semibold">Autor</label>
+								<input type="text" class="input input-bordered w-full" name="author" required />
+							</div>
 
-						<div class="text-center pt-4">
-							<button class="btn btn-primary px-10">Enviar Artigo</button>
-						</div>
-					</form>
+							<div>
+								<label class="label font-semibold">Arquivo (.pdf)</label>
+								<input type="file" class="file-input file-input-bordered w-full" accept=".pdf"
+									name="articleFile" required />
+							</div>
+
+							<div class="text-right pt-2">
+								<button class="btn btn-primary">Enviar Artigo</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 
